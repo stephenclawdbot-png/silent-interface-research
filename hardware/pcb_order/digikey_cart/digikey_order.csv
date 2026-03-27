@@ -1,0 +1,33 @@
+
+Index,Quantity,Part Number,Manufacturer Part Number,Description,Unit Price,Extended Price,Package,Mounting Type,Supplier Link
+1,2,497-15668-ND,STM32L476RGT6,STM32L476RGT6 ARM Cortex-M4 Microcontroller 1MB Flash 128KB SRAM LQFP-64,$15.23,$30.46,LQFP-64,Surface Mount,https://www.digikey.com/en/products/detail/stmicroelectronics/STM32L476RGT6/497-15668-ND
+2,4,INA333AIDGKR,TX,INA333AIDGKR,DGK Instrumentation Amplifier Zero-Drift Low-Power SOT-23-8,$2.85,$11.40,SOT-23-8,Surface Mount,https://www.digikey.com/en/products/detail/texas-instruments/INA333AIDGKR/2051235
+3,2,OPA2333AIDGKR,TX,OPA2333AIDGKR,Dual Precision Op-Amp Zero-Drift SOT-23-8,$2.10,$4.20,SOT-23-8,Surface Mount,https://www.digikey.com/en/products/detail/texas-instruments/OPA2333AIDGKR/2051240
+4,3,AS3933-BQFTCT-ND,AS3933-BQFT,3D Low Frequency Wake-up Receiver IC QFN-16,$6.89,$20.67,QFN-16,Surface Mount,https://www.digikey.com/en/products/detail/ams/AS3933-BQFT/2772215
+5,2,TPA2005D1DGNT,TX,TPA2005D1DGNR,1.4W Mono Class-D Audio Amplifier WSON-8,$1.25,$2.50,WSON-8,Surface Mount,https://www.digikey.com/en/products/detail/texas-instruments/TPA2005D1DGNR/1457499
+6,2,TPS63001DRCR,TPS63001DRCR,Buck-Boost Converter 3.3V Output Adjustable VSON-10,$3.45,$6.90,VSON-10,Surface Mount,https://www.digikey.com/en/products/detail/texas-instruments/TPS63001DRCR/1880333
+7,2,MCP73831T-2ACI/OT,MCP73831T-2ACI/OT,Single Cell LiPo Charger SOT-23-5,$0.85,$1.70,SOT-23-5,Surface Mount,https://www.digikey.com/en/products/detail/microchip-technology/MCP73831T-2ACI-OT/706561
+8,20,10µH Inductor,1008,Coilcraft 1008CS-100XGLC,10µH Shielded Inductor Q>50 1008,$1.20,$24.00,1008,Surface Mount,https://www.digikey.com/en/products/detail/coilcraft/1008CS-100XGLC/700783
+9,10,4.7µH Power,CDRH4D28,Sumida CDRH4D28NP-4R7NC,4.7uH 2.1A Power Inductor,$0.85,$8.50,CDRH4D28,Surface Mount,https://www.digikey.com/en/products/detail/sumida/CDRH4D28NP-4R7NC/527905
+10,100,0805 Resistor Kit,RMCF0805JT10K0,Stackpole RMCF0805JT10K0,10k Ohm 5% 0805,$0.01,$1.00,0805,Surface Mount,https://www.digikey.com/en/products/detail/stackpole-electronics/RMCF0805JT10K0/1942852
+11,50,0805 Resistor Kit,RMCF0805JT100K,Stackpole RMCF0805JT100K,100k Ohm 5% 0805,$0.01,$0.50,0805,Surface Mount,https://www.digikey.com/en/products/detail/stackpole-electronics/RMCF0805JT100K/1942855
+12,50,0805 Resistor Kit,RMCF0805JT1K00,Stackpole RMCF0805JT1K00,1k Ohm 5% 0805,$0.01,$0.50,0805,Surface Mount,https://www.digikey.com/en/products/detail/stackpole-electronics/RMCF0805JT1K00/1942850
+13,10,10M Resistor Kit,RMCF0805JT10M0,Stackpole RMCF0805JT10M0,10M Ohm High-Impedance 5%,$0.01,$0.10,0805,Surface Mount,https://www.digikey.com/en/products/detail/stackpole-electronics/RMCF0805JT10M0/1942858
+14,100,0805 Capacitor Kit,885012207001,Wurth Elektronik 885012207001,100nF 50V X7R 0805,$0.03,$3.00,0805,Surface Mount,https://www.digikey.com/en/products/detail/w-rth-elektronik/885012207001/6565506
+15,50,0805 Capacitor Kit,C0805C106K8PACTU,KEMET C0805C106K8PACTU,10uF 16V X5R 0805,$0.12,$6.00,0805,Surface Mount,https://www.digikey.com/en/products/detail/kemet/C0805C106K8PACTU/815876
+16,50,0805 Capacitor Kit,08051C104JAT2A,AVX 08051C104JAT2A,100nF 50V X7R 0805,$0.04,$2.00,0805,Surface Mount,https://www.digikey.com/en/products/detail/kyocera-avx/08051C104JAT2A/705803
+17,50,0805 Capacitor Kit,C0805C103K5RACTU,KEMET C0805C103K5RACTU,10nF 50V X7R 0805,$0.03,$1.50,0805,Surface Mount,https://www.digikey.com/en/products/detail/kemet/C0805C103K5RACTU/815868
+18,10,1206 Capacitor Kit,C3216X7R1E106K160AC,TDK C3216X7R1E106K160AC,10uF 25V X7R 1206,$0.35,$3.50,1206,Surface Mount,https://www.digikey.com/en/products/detail/tdk/C3216X7R1E106K160AC/1734913
+19,2,USB-C Connector,2171790001,Molex 2171790001,USB Type-C Receptacle 16pos,$0.85,$1.70,Through-Hole/SMD,Hybrid,https://www.digikey.com/en/products/detail/molex/2171790001/14629860
+20,4,JST-PH Connector,S2B-PH-SM4-TB,JST S2B-PH-SM4-TB,2.0mm Pitch Header SMD,$0.60,$2.40,SMD,Surface Mount,https://www.digikey.com/en/products/detail/jst-sales-america/S2B-PH-SM4-TB/166886
+21,10,2.54mm Header,61201021621,Wurth Elektronik 61201021621,Pin Header 1x20 2.54mm,$0.28,$2.80,Through-Hole,Through Hole,https://www.digikey.com/en/products/detail/w-rth-elektronik/61201021621/4846781
+22,5,2.54mm Header,61300811121,Wurth Elektronik 61300811121,Pin Header 1x8 2.54mm,$0.14,$0.70,Through-Hole,Through Hole,https://www.digikey.com/en/products/detail/w-rth-elektronik/61300811121/4846914
+23,4,8MHz Crystal,ABM3B-8.000MHz-D2Y-T,Abracon ABM3B-8.000MHz-D2Y-T,8MHz 20ppm Ceramic SMD,$0.95,$3.80,SMD HC49/SM,Surface Mount,https://www.digikey.com/en/products/detail/abracon/ABM3B-8.000MHZ-D2Y-T/16043883
+24,4,32.768kHz Crystal,ABS07-32.768KHZ-9-T,Abracon ABS07,32.768kHz Crystal FC-135 SMD,$0.45,$1.80,FC-135,Surface Mount,https://www.digikey.com/en/products/detail/abracon/ABS07-32.768KHZ-9-T/1066254
+25,2,Green LED,150080GS75000,Wurth Elektronik 150080GS75000,Green LED 0805 570nm,$0.15,$0.30,0805,Surface Mount,https://www.digikey.com/en/products/detail/w-rth-elektronik/150080GS75000/16419925
+26,4,Schottky Diode,BAT54WS-7-F,Diodes Inc BAT54WS-7-F,Schottky Barrier Diode SOD-323,$0.08,$0.32,SOD-323,Surface Mount,https://www.digikey.com/en/products/detail/diodes-incorporated/BAT54WS-7-F/3500301
+27,2,DPDT Switch,JS202011CQN,C&K JS202011CQN,DPDT Slide Switch 6POS,$1.20,$2.40,SMD,Surface Mount,https://www.digikey.com/en/products/detail/c-k/JS202011CQN/2689864
+28,2,Tactile Switch,TL3305AF260QG,E-Switch TL3305AF260QG,Tactile Switch 12V 50mA,$0.25,$0.50,SMD,Surface Mount,https://www.digikey.com/en/products/detail/e-switch/TL3305AF260QG/11109463
+,,,,SUBTOTAL,,$143.04,,,
+,,,,SHIPPING ESTIMATE,,$15.00,Singapore Warehouse,,
+,,,,TOTAL ESTIMATE,,$158.04,,,
