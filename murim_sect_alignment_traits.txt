@@ -1,0 +1,268 @@
+namespace = murim_lite
+
+# Training complete
+murim_lite.001 = {
+	type = character_event
+	title = murim_lite.001.t
+	desc = murim_lite.001.desc
+	theme = martial
+
+	trigger = {
+		has_character_modifier = murim_active_training
+		murim_is_martial_artist = yes
+	}
+
+	mean_time_to_happen = { days = 180 }
+
+	option = {
+		name = murim_lite.001.a
+		murim_advance_cultivation_effect = yes
+		remove_character_modifier = murim_active_training
+	}
+}
+
+# Random duel challenge
+murim_lite.002 = {
+	type = character_event
+	title = murim_lite.002.t
+	desc = murim_lite.002.desc
+	theme = martial
+
+	trigger = {
+		murim_can_duel = yes
+	}
+
+	mean_time_to_happen = { days = 365 }
+
+	option = {
+		name = murim_lite.002.a
+		if = {
+			limit = { prowess >= 12 }
+			murim_duel_victory_effect = yes
+		}
+		else = {
+			murim_duel_defeat_effect = yes
+		}
+		add_character_modifier = { modifier = murim_challenge_cooldown days = 90 }
+	}
+
+	option = {
+		name = murim_lite.002.b
+		add_prestige = -25
+	}
+}
+
+# Qi deviation
+murim_lite.003 = {
+	type = character_event
+	title = murim_lite.003.t
+	desc = murim_lite.003.desc
+	theme = martial
+
+	trigger = {
+		murim_is_martial_artist = yes
+		has_character_modifier = murim_cultivation_seclusion
+	}
+
+	mean_time_to_happen = { months = 24 }
+
+	option = {
+		name = murim_lite.003.a
+		add_character_modifier = { modifier = murim_qi_deviation_penalty days = 180 }
+		remove_character_modifier = murim_cultivation_seclusion
+	}
+
+	option = {
+		name = murim_lite.003.b
+		remove_character_modifier = murim_cultivation_seclusion
+		add_prestige = -100
+	}
+}
+
+# Top 50 unlock
+murim_lite.004 = {
+	type = character_event
+	title = murim_lite.004.t
+	desc = murim_lite.004.desc
+	theme = martial
+
+	trigger = {
+		murim_is_in_jianghu = yes
+		var:murim_jianghu_standing >= 100
+		NOT = { has_trait = murim_top_fifty_ranker }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = murim_lite.004.a
+		add_trait = murim_top_fifty_ranker
+		add_prestige = 300
+	}
+}
+
+# Top 10 unlock
+murim_lite.005 = {
+	type = character_event
+	title = murim_lite.005.t
+	desc = murim_lite.005.desc
+	theme = martial
+
+	trigger = {
+		has_trait = murim_top_fifty_ranker
+		var:murim_jianghu_standing >= 500
+		NOT = { has_trait = murim_top_ten_ranker }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = murim_lite.005.a
+		remove_trait = murim_top_fifty_ranker
+		add_trait = murim_top_ten_ranker
+		add_prestige = 1000
+	}
+}
+
+# Mentor found
+murim_lite.010 = {
+	type = character_event
+	title = murim_lite.010.t
+	desc = murim_lite.010.desc
+	theme = martial
+
+	option = {
+		name = murim_lite.010.a
+		trigger_event = { id = murim_lite.011 days = 7 }
+	}
+
+	option = {
+		name = murim_lite.010.b
+		add_prestige = -25
+	}
+}
+
+# Mentor training begins
+murim_lite.011 = {
+	type = character_event
+	title = murim_lite.011.t
+	desc = murim_lite.011.desc
+	theme = martial
+
+	option = {
+		name = murim_lite.011.a
+		add_trait = murim_has_mentor
+		add_character_modifier = { modifier = murim_mentor_bond days = 1825 }
+		change_variable = { name = murim_cultivation_progress add = 30 }
+	}
+}
+
+# Direct duel outcome
+murim_lite.020 = {
+	type = character_event
+	title = murim_lite.020.t
+	desc = murim_lite.020.desc
+	theme = martial
+
+	option = {
+		name = murim_lite.020.a
+		trigger = { prowess >= 12 }
+		murim_duel_victory_effect = yes
+		add_character_modifier = { modifier = murim_challenge_cooldown days = 90 }
+		murim_gain_jianghu_standing_effect = { AMOUNT = 20 }
+	}
+
+	option = {
+		name = murim_lite.020.b
+		trigger = { prowess < 12 }
+		murim_duel_defeat_effect = yes
+		add_character_modifier = { modifier = murim_challenge_cooldown days = 90 }
+	}
+}
+
+# Grand Tournament
+murim_lite.030 = {
+	type = character_event
+	title = murim_lite.030.t
+	desc = murim_lite.030.desc
+	theme = martial
+
+	trigger = {
+		murim_is_in_jianghu = yes
+		murim_is_martial_artist = yes
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 3
+			NOT = { murim_has_ranking = yes }
+		}
+	}
+
+	option = {
+		name = murim_lite.030.a
+		trigger = {
+			prowess >= 15
+			OR = {
+				has_trait = murim_golden_core
+				has_trait = murim_nascent_soul
+				has_trait = murim_spirit_severing
+			}
+		}
+		add_character_modifier = { modifier = murim_tournament_winner days = 365 }
+		murim_gain_jianghu_standing_effect = { AMOUNT = 50 }
+		add_prestige = 500
+		if = {
+			limit = { NOT = { has_trait = murim_top_fifty_ranker } }
+			add_trait = murim_top_fifty_ranker
+		}
+	}
+
+	option = {
+		name = murim_lite.030.b
+		trigger = { prowess < 15 }
+		add_prestige = 50
+		murim_gain_jianghu_standing_effect = { AMOUNT = 10 }
+	}
+
+	option = {
+		name = murim_lite.030.c
+		add_prestige = -25
+	}
+}
+
+# Alignment choice
+murim_lite.040 = {
+	type = character_event
+	title = murim_lite.040.t
+	desc = murim_lite.040.desc
+	theme = martial
+
+	trigger = {
+		murim_is_in_jianghu = yes
+		NOT = { has_trait = murim_orthodox }
+		NOT = { has_trait = murim_demonic }
+		NOT = { has_trait = murim_neutral_path }
+	}
+
+	mean_time_to_happen = { days = 180 }
+
+	option = {
+		name = murim_lite.040.a
+		add_trait = murim_orthodox
+		add_character_modifier = { modifier = murim_orthodox_reputation days = 730 }
+	}
+
+	option = {
+		name = murim_lite.040.b
+		add_trait = murim_demonic
+		add_character_modifier = { modifier = murim_demonic_reputation days = 730 }
+		add_prowess = 2
+	}
+
+	option = {
+		name = murim_lite.040.c
+		add_trait = murim_neutral_path
+	}
+}
