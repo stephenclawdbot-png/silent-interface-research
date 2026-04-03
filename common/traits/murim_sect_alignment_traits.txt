@@ -1,0 +1,91 @@
+# Sect membership traits
+murim_wudang_disciple = {
+	index = 520
+	category = fame
+	icon = murim_wudang_clan
+	modifier = {
+		prowess = 2
+		learning = 2
+		monthly_piety = 0.2
+		general_opinion = 5
+	}
+}
+
+murim_shaolin_disciple = {
+	index = 521
+	category = fame
+	icon = murim_iron_body
+	modifier = {
+		prowess = 3
+		health = 0.5
+		monthly_piety = 0.3
+	}
+}
+
+murim_heavenly_demon_disciple = {
+	index = 522
+	category = fame
+	icon = murim_demonic_cultivator
+	modifier = {
+		prowess = 4
+		intrigue = 2
+		monthly_prestige = 0.3
+		general_opinion = -10
+		same_faith_opinion = 10
+	}
+}
+
+murim_beggar_sect_disciple = {
+	index = 523
+	category = fame
+	icon = murim_phantom_blade
+	modifier = {
+		prowess = 2
+		intrigue = 3
+		diplomacy = 1
+		monthly_prestige = 0.1
+	}
+}
+
+# Alignment traits
+murim_orthodox = {
+	index = 530
+	category = fame
+	icon = murim_yin_yang
+	modifier = {
+		general_opinion = 10
+		monthly_piety = 0.2
+	}
+}
+
+murim_demonic = {
+	index = 531
+	category = fame
+	icon = murim_inner_demon_possession
+	modifier = {
+		general_opinion = -15
+		dread_baseline_add = 15
+		prowess = 3
+	}
+}
+
+murim_neutral_path = {
+	index = 532
+	category = fame
+	icon = murim_yin_yang
+	modifier = {
+		intrigue = 1
+		diplomacy = 1
+	}
+}
+
+# Mentor trait
+murim_has_mentor = {
+	index = 540
+	category = fame
+	icon = murim_outer_qi
+	modifier = {
+		prowess = 1
+		learning = 1
+	}
+}

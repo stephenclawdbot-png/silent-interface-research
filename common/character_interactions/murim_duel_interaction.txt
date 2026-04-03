@@ -1,0 +1,43 @@
+murim_challenge_to_duel_interaction = {
+	category = interaction_category_hostile
+	desc = murim_challenge_to_duel_interaction_desc
+	icon = sword_duel
+
+	is_shown = {
+		scope:actor = {
+			murim_can_duel = yes
+		}
+		scope:recipient = {
+			murim_is_in_jianghu = yes
+			NOT = { this = scope:actor }
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			murim_can_duel = yes
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = { id = murim_lite.020 }
+		}
+	}
+
+	ai_accept = {
+		base = 0
+		modifier = {
+			add = 50
+			scope:actor = { prowess <= scope:recipient.prowess }
+		}
+		modifier = {
+			add = -50
+			scope:actor = { prowess >= scope:recipient.prowess }
+		}
+	}
+
+	cooldown = { days = 90 }
+}

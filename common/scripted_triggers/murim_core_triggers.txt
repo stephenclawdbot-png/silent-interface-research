@@ -1,0 +1,65 @@
+# Murim Chronicles Lite - Core Triggers
+
+murim_is_in_jianghu = {
+	has_variable = murim_jianghu_member
+}
+
+murim_is_martial_artist = {
+	OR = {
+		has_trait = murim_martial_artist
+		has_trait = murim_outer_qi
+		has_trait = murim_inner_qi
+		has_trait = murim_golden_core
+		has_trait = murim_nascent_soul
+		has_trait = murim_spirit_severing
+	}
+}
+
+murim_can_cultivate = {
+	murim_is_in_jianghu = yes
+	murim_is_martial_artist = yes
+	NOT = { has_character_modifier = murim_active_training }
+	NOT = { has_character_modifier = murim_cultivation_seclusion }
+	is_imprisoned = no
+	is_alive = yes
+}
+
+murim_can_duel = {
+	murim_is_in_jianghu = yes
+	murim_is_martial_artist = yes
+	NOT = { has_character_modifier = murim_recovering_from_duel }
+	NOT = { has_character_modifier = murim_challenge_cooldown }
+	is_imprisoned = no
+	is_alive = yes
+}
+
+murim_has_ranking = {
+	OR = {
+		has_trait = murim_top_fifty_ranker
+		has_trait = murim_top_ten_ranker
+		has_trait = murim_number_one_ranker
+	}
+}
+
+murim_is_orthodox = {
+	has_trait = murim_orthodox
+}
+
+murim_is_demonic = {
+	has_trait = murim_demonic
+}
+
+murim_has_sect = {
+	OR = {
+		has_trait = murim_wudang_disciple
+		has_trait = murim_shaolin_disciple
+		has_trait = murim_heavenly_demon_disciple
+		has_trait = murim_beggar_sect_disciple
+	}
+}
+
+murim_can_seek_mentor = {
+	murim_is_in_jianghu = yes
+	NOT = { has_trait = murim_has_mentor }
+	NOT = { has_variable = murim_mentor_id }
+}

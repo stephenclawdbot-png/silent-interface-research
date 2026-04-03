@@ -1,0 +1,191 @@
+# Sect join decisions
+
+murim_join_wudang = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 120
+
+	desc = murim_join_wudang_desc
+
+	is_shown = {
+		murim_is_in_jianghu = yes
+		NOT = { murim_has_sect = yes }
+		NOT = { has_trait = murim_demonic }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		prowess >= 8
+		prestige >= 100
+	}
+
+	cost = { prestige = 100 }
+
+	effect = {
+		add_trait = murim_wudang_disciple
+		if = {
+			limit = { NOT = { has_trait = murim_orthodox } }
+			add_trait = murim_orthodox
+		}
+		add_prestige = 50
+		custom_tooltip = murim_join_sect_tt
+	}
+
+	ai_will_do = {
+		value = 30
+		modifier = {
+			add = 20
+			has_trait = honest
+		}
+	}
+}
+
+murim_join_shaolin = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 120
+
+	desc = murim_join_shaolin_desc
+
+	is_shown = {
+		murim_is_in_jianghu = yes
+		NOT = { murim_has_sect = yes }
+		NOT = { has_trait = murim_demonic }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		prowess >= 10
+		prestige >= 100
+	}
+
+	cost = { prestige = 100 }
+
+	effect = {
+		add_trait = murim_shaolin_disciple
+		if = {
+			limit = { NOT = { has_trait = murim_orthodox } }
+			add_trait = murim_orthodox
+		}
+		add_prestige = 50
+		custom_tooltip = murim_join_sect_tt
+	}
+
+	ai_will_do = { value = 30 }
+}
+
+murim_join_heavenly_demon = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 120
+
+	desc = murim_join_heavenly_demon_desc
+
+	is_shown = {
+		murim_is_in_jianghu = yes
+		NOT = { murim_has_sect = yes }
+		NOT = { has_trait = murim_orthodox }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		prowess >= 10
+	}
+
+	cost = { prestige = 50 }
+
+	effect = {
+		add_trait = murim_heavenly_demon_disciple
+		if = {
+			limit = { NOT = { has_trait = murim_demonic } }
+			add_trait = murim_demonic
+		}
+		add_prestige = 100
+		custom_tooltip = murim_join_sect_tt
+	}
+
+	ai_will_do = {
+		value = 30
+		modifier = {
+			add = 20
+			has_trait = deceitful
+		}
+	}
+}
+
+murim_join_beggar_sect = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 120
+
+	desc = murim_join_beggar_sect_desc
+
+	is_shown = {
+		murim_is_in_jianghu = yes
+		NOT = { murim_has_sect = yes }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		prowess >= 6
+	}
+
+	cost = { prestige = 25 }
+
+	effect = {
+		add_trait = murim_beggar_sect_disciple
+		add_prestige = 25
+		custom_tooltip = murim_join_sect_tt
+	}
+
+	ai_will_do = { value = 20 }
+}
+
+murim_leave_sect = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 0
+
+	desc = murim_leave_sect_desc
+
+	is_shown = {
+		murim_has_sect = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	cost = { prestige = 200 }
+
+	effect = {
+		if = { limit = { has_trait = murim_wudang_disciple } remove_trait = murim_wudang_disciple }
+		if = { limit = { has_trait = murim_shaolin_disciple } remove_trait = murim_shaolin_disciple }
+		if = { limit = { has_trait = murim_heavenly_demon_disciple } remove_trait = murim_heavenly_demon_disciple }
+		if = { limit = { has_trait = murim_beggar_sect_disciple } remove_trait = murim_beggar_sect_disciple }
+		add_prestige = -100
+		custom_tooltip = murim_leave_sect_tt
+	}
+
+	ai_will_do = { value = 0 }
+}
+
+murim_seek_mentor = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 60
+
+	desc = murim_seek_mentor_desc
+
+	is_shown = {
+		murim_can_seek_mentor = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		prestige >= 50
+	}
+
+	cost = { prestige = 50 }
+
+	effect = {
+		trigger_event = { id = murim_lite.010 days = 30 }
+		custom_tooltip = murim_seek_mentor_tt
+	}
+
+	ai_will_do = { value = 50 }
+}

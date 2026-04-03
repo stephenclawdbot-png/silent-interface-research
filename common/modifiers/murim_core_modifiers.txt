@@ -1,0 +1,76 @@
+# Murim Chronicles Lite - Core Modifiers
+
+murim_recovering_from_duel = {
+	icon = recovery
+	prowess = -3
+	health = -0.25
+}
+
+murim_challenge_cooldown = {
+	icon = recovery
+	monthly_prestige = -0.1
+}
+
+murim_active_training = {
+	icon = learning
+	prowess = 1
+	health = 0.1
+}
+
+murim_cultivation_seclusion = {
+	icon = learning
+	prowess = 2
+	learning = 1
+	monthly_prestige = -0.2
+}
+
+murim_qi_deviation_penalty = {
+	icon = health_penalty
+	health = -1.0
+	prowess = -5
+}
+
+murim_jianghu_newcomer = {
+	icon = positive
+	monthly_prestige = 0.1
+}
+
+murim_ranked_fighter_aura = {
+	icon = positive
+	prowess = 2
+	monthly_prestige = 0.3
+	general_opinion = 5
+}
+
+murim_duel_victory_high = {
+	icon = positive
+	prowess = 1
+	monthly_prestige = 0.5
+}
+
+# Alignment modifiers
+murim_orthodox_reputation = {
+	icon = positive
+	general_opinion = 5
+	monthly_piety = 0.1
+}
+
+murim_demonic_reputation = {
+	icon = negative
+	general_opinion = -5
+	dread_baseline_add = 5
+}
+
+# Tournament modifiers
+murim_tournament_winner = {
+	icon = positive
+	prowess = 3
+	monthly_prestige = 1.0
+	general_opinion = 20
+}
+
+murim_mentor_bond = {
+	icon = learning
+	prowess = 1
+	learning = 2
+}

@@ -1,0 +1,127 @@
+# Murim Chronicles Lite - Core Decisions
+
+enter_the_jianghu = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	major = yes
+	ai_check_interval = 60
+
+	desc = enter_the_jianghu_desc
+	selection_tooltip = enter_the_jianghu_tooltip
+
+	is_shown = {
+		is_adult = yes
+		NOT = { has_variable = murim_jianghu_member }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		OR = {
+			prowess >= 8
+			martial >= 8
+		}
+	}
+
+	cost = { prestige = 50 }
+
+	effect = {
+		murim_enter_jianghu_effect = yes
+		custom_tooltip = enter_the_jianghu_effect_tt
+	}
+
+	ai_check_interval = 60
+	ai_potential = {
+		prowess >= 8
+	}
+	ai_will_do = {
+		value = 50
+		modifier = {
+			add = 50
+			prowess >= 12
+		}
+	}
+}
+
+murim_begin_training = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 30
+
+	desc = murim_begin_training_desc
+	selection_tooltip = murim_begin_training_tooltip
+
+	is_shown = {
+		murim_is_in_jianghu = yes
+		murim_is_martial_artist = yes
+		NOT = { has_character_modifier = murim_active_training }
+		NOT = { has_character_modifier = murim_cultivation_seclusion }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	cost = { gold = 5 }
+
+	effect = {
+		add_character_modifier = {
+			modifier = murim_active_training
+			days = 365
+		}
+		change_variable = { name = murim_cultivation_progress add = 15 }
+		custom_tooltip = murim_begin_training_effect_tt
+	}
+
+	ai_will_do = { value = 60 }
+}
+
+murim_enter_seclusion = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 60
+
+	desc = murim_enter_seclusion_desc
+
+	is_shown = {
+		murim_is_in_jianghu = yes
+		murim_is_martial_artist = yes
+		NOT = { has_character_modifier = murim_cultivation_seclusion }
+		NOT = { has_character_modifier = murim_active_training }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		gold >= 20
+	}
+
+	cost = { gold = 20 }
+
+	effect = {
+		add_character_modifier = {
+			modifier = murim_cultivation_seclusion
+			days = 180
+		}
+		murim_advance_cultivation_effect = yes
+		custom_tooltip = murim_enter_seclusion_effect_tt
+	}
+
+	ai_will_do = { value = 40 }
+}
+
+murim_open_ledger = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	ai_check_interval = 0
+
+	desc = murim_open_ledger_desc
+
+	is_shown = {
+		murim_is_in_jianghu = yes
+	}
+
+	is_valid_showing_failures_only = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = murim_open_ledger_effect_tt
+	}
+
+	ai_will_do = { value = 0 }
+}

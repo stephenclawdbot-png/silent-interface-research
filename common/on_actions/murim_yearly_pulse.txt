@@ -1,0 +1,6 @@
+on_yearly_pulse = {
+	events = {
+		murim_lite.030  # Grand Tournament chance
+		murim_lite.040  # Alignment choice
+	}
+}

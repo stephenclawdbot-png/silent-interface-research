@@ -1,0 +1,149 @@
+l_english:
+ # Traits
+ murim_martial_artist: "Martial Artist"
+ murim_martial_artist_desc: "This character has entered the Jianghu and begun training in the martial arts."
+ murim_outer_qi: "Outer Qi Realm"
+ murim_outer_qi_desc: "The first step on the cultivation path. Qi flows through the meridians but has not yet been condensed."
+ murim_inner_qi: "Inner Qi Realm"
+ murim_inner_qi_desc: "Qi has been condensed and flows freely. The martial artist's strength grows noticeably."
+ murim_golden_core: "Golden Core Realm"
+ murim_golden_core_desc: "A core of condensed qi forms within the dantian. A significant milestone in cultivation."
+ murim_nascent_soul: "Nascent Soul Realm"
+ murim_nascent_soul_desc: "The soul separates from the body and grows independently. Few reach this stage."
+ murim_spirit_severing: "Spirit Severing Realm"
+ murim_spirit_severing_desc: "The practitioner severs their ties to the mortal world. A legendary realm attained by almost none."
+ murim_top_fifty_ranker: "Top 50 Jianghu Ranker"
+ murim_top_fifty_ranker_desc: "Recognized as one of the fifty strongest martial artists in the Jianghu."
+ murim_top_ten_ranker: "Top 10 Jianghu Ranker"
+ murim_top_ten_ranker_desc: "Among the ten most feared martial artists in the Jianghu. Their name alone commands respect."
+ murim_number_one_ranker: "Supreme Martial Artist"
+ murim_number_one_ranker_desc: "Unrivaled under heaven. The strongest martial artist in the known world."
+
+ # Modifiers
+ murim_recovering_from_duel: "Recovering from Duel"
+ murim_challenge_cooldown: "Duel Cooldown"
+ murim_active_training: "Training"
+ murim_cultivation_seclusion: "In Seclusion"
+ murim_qi_deviation_penalty: "Qi Deviation"
+ murim_jianghu_newcomer: "Jianghu Newcomer"
+ murim_ranked_fighter_aura: "Ranked Fighter"
+ murim_duel_victory_high: "Duel Victory"
+
+ # Decisions
+ enter_the_jianghu: "Enter the Jianghu"
+ enter_the_jianghu_desc: "The Jianghu — the rivers and lakes of the martial world — calls to me. By formally entering it I commit to the path of a martial artist."
+ enter_the_jianghu_tooltip: "Formally join the martial world and begin cultivation."
+ enter_the_jianghu_effect_tt: "You have entered the Jianghu. Begin training to advance your cultivation."
+
+ murim_begin_training: "Begin Training"
+ murim_begin_training_desc: "Dedicate time to martial arts practice, advancing cultivation."
+ murim_begin_training_tooltip: "Train your martial arts for one year."
+ murim_begin_training_effect_tt: "You are now training. A cultivation event will fire within a year."
+
+ murim_enter_seclusion: "Enter Seclusion"
+ murim_enter_seclusion_desc: "Withdraw from the world to focus entirely on cultivation. Faster progress but unable to act freely."
+ murim_enter_seclusion_effect_tt: "You enter seclusion. Cultivation will advance significantly."
+
+ murim_open_ledger: "Open Murim Ledger"
+ murim_open_ledger_desc: "View the rankings of the martial world."
+ murim_open_ledger_effect_tt: "The Jianghu rankings."
+
+ # Events
+ murim_lite.001.t: "A Breakthrough"
+ murim_lite.001.desc: "After months of training, I feel something shift within my meridians. The qi flows differently — stronger, more refined."
+ murim_lite.001.a: "This is only the beginning."
+
+ murim_lite.002.t: "A Challenge"
+ murim_lite.002.desc: "A fellow Jianghu member has caught wind of my reputation and seeks to test their skills against mine."
+ murim_lite.002.a: "I accept. Let our fists decide."
+ murim_lite.002.b: "Not today. I have other matters."
+
+ murim_lite.003.t: "Qi Deviation"
+ murim_lite.003.desc: "During deep seclusion the qi becomes unstable. A moment of distraction and the energy surges violently through my meridians."
+ murim_lite.003.a: "Force through it. No pain no gain."
+ murim_lite.003.b: "Retreat. Better to lose progress than be injured."
+
+ murim_lite.004.t: "Recognized by the Jianghu"
+ murim_lite.004.desc: "Word spreads through the martial world. My victories and cultivation have not gone unnoticed. I am now counted among the top fifty."
+ murim_lite.004.a: "The climb continues."
+
+ murim_lite.005.t: "Top Ten"
+ murim_lite.005.desc: "The martial world acknowledges what few can deny — I stand among the ten strongest under heaven."
+ murim_lite.005.a: "The summit beckons."
+
+ # Sect traits
+ murim_wudang_disciple: "Wudang Disciple"
+ murim_wudang_disciple_desc: "A member of the orthodox Wudang Sect, known for their flowing sword techniques and Daoist philosophy."
+ murim_shaolin_disciple: "Shaolin Disciple"
+ murim_shaolin_disciple_desc: "A disciple of the great Shaolin Temple, masters of iron body and staff techniques."
+ murim_heavenly_demon_disciple: "Heavenly Demon Disciple"
+ murim_heavenly_demon_disciple_desc: "A follower of the Heavenly Demon Sect. Their arts are powerful but feared throughout the Jianghu."
+ murim_beggar_sect_disciple: "Beggar Sect Member"
+ murim_beggar_sect_disciple_desc: "A member of the Beggar Sect, the largest organization in the Jianghu. What they lack in prestige they make up for in numbers and information."
+ murim_orthodox: "Orthodox Path"
+ murim_orthodox_desc: "This martial artist walks the righteous path, adhering to the codes of the orthodox Jianghu."
+ murim_demonic: "Demonic Path"
+ murim_demonic_desc: "This martial artist has embraced forbidden arts and walks a path feared by the orthodox world."
+ murim_neutral_path: "Between Worlds"
+ murim_neutral_path_desc: "Neither orthodox nor demonic, this martial artist walks their own path."
+ murim_has_mentor: "Has a Master"
+ murim_has_mentor_desc: "This character has found a master to guide their cultivation."
+
+ # Sect decisions
+ murim_join_wudang: "Join the Wudang Sect"
+ murim_join_wudang_desc: "Seek entry to the Wudang Sect, the foremost orthodox sect of the Jianghu."
+ murim_join_shaolin: "Join the Shaolin Temple"
+ murim_join_shaolin_desc: "Seek to become a disciple of the great Shaolin Temple."
+ murim_join_heavenly_demon: "Join the Heavenly Demon Sect"
+ murim_join_heavenly_demon_desc: "Pledge yourself to the Heavenly Demon Sect and embrace its forbidden arts."
+ murim_join_beggar_sect: "Join the Beggar Sect"
+ murim_join_beggar_sect_desc: "Become a member of the Beggar Sect, the information network of the Jianghu."
+ murim_leave_sect: "Leave Sect"
+ murim_leave_sect_desc: "Formally sever ties with your sect. A costly decision in prestige."
+ murim_join_sect_tt: "You have joined a sect."
+ murim_leave_sect_tt: "You have left your sect."
+
+ murim_seek_mentor: "Seek a Master"
+ murim_seek_mentor_desc: "Search for a seasoned martial artist willing to take you on as a disciple."
+ murim_seek_mentor_tt: "You are seeking a master. An event will fire within a month."
+
+ # Duel interaction
+ murim_challenge_to_duel_interaction: "Challenge to Duel"
+ murim_challenge_to_duel_interaction_desc: "Challenge this martial artist to a formal duel in the Jianghu tradition."
+
+ # Mentor events
+ murim_lite.010.t: "Seeking a Master"
+ murim_lite.010.desc: "I have put out word in the Jianghu that I seek a master. Several candidates have been suggested to me."
+ murim_lite.010.a: "A seasoned fighter agrees to take me on."
+ murim_lite.010.b: "No suitable master could be found."
+
+ murim_lite.011.t: "A Master Found"
+ murim_lite.011.desc: "The master studies me for a long moment before nodding. The training begins immediately — harder and more precise than anything I have attempted alone."
+ murim_lite.011.a: "I will not waste this opportunity."
+
+ # Duel events
+ murim_lite.020.t: "The Duel"
+ murim_lite.020.desc: "We face each other beneath the open sky. No words. The qi crackles between us."
+ murim_lite.020.a: "Victory. Their technique was good — mine was better."
+ murim_lite.020.b: "Defeat. I underestimated them."
+
+ # Tournament events
+ murim_lite.030.t: "The Grand Tournament"
+ murim_lite.030.desc: "Word spreads through the Jianghu — the Grand Tournament is being held. The strongest martial artists under heaven will gather to compete for glory and ranking."
+ murim_lite.030.a: "I enter and emerge victorious."
+ murim_lite.030.b: "I enter and give a good account of myself."
+ murim_lite.030.c: "This is not my moment."
+ murim_tournament_participated_tt: "You participated in the Grand Tournament and gained valuable experience."
+
+ # Alignment events
+ murim_lite.040.t: "The Crossroads"
+ murim_lite.040.desc: "Every martial artist must eventually choose — the righteous path of the orthodox world, the power of the demonic arts, or the lonely road between them."
+ murim_lite.040.a: "I walk the orthodox path. Honor and righteousness above all."
+ murim_lite.040.b: "Power is power. I embrace whatever works."
+ murim_lite.040.c: "I answer to no faction. I walk my own road."
+
+ # Modifier names
+ murim_orthodox_reputation: "Orthodox Reputation"
+ murim_demonic_reputation: "Demonic Reputation"
+ murim_tournament_winner: "Tournament Champion"
+ murim_mentor_bond: "Under Mentorship"

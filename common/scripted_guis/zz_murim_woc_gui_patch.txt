@@ -1,0 +1,76 @@
+# Murim Chronicles - WoC GUI Patch
+# Overrides Ways of China scripted GUI triggers that crash on landless characters
+# The WoC GUI checks realm/county data every frame on ANY open character window
+# (not just the player's — opening any landless character's window triggers it)
+# causing tens of thousands of null scope errors and crash at 0x00007FF6825B3A49
+#
+# Fix: exists = yes bails out immediately if character scope is null
+#      is_landed = yes prevents realm/county checks on landless characters
+# NOTE: zz_ prefix ensures this loads AFTER WoC's own files alphabetically
+
+has_additional_my_realm_window_woc = {
+	scope = character
+	is_shown = {
+		exists = yes
+		is_landed = yes
+		has_realm_law = realm_law_woc_enabled
+	}
+}
+
+can_has_councillor_woc_debug = {
+	scope = character
+	is_valid = {
+		exists = yes
+		is_landed = yes
+		has_realm_law = realm_law_woc_enabled
+	}
+}
+
+# Additional WoC GUI overrides for landless safety
+woc_county_window_visible = {
+	scope = character
+	is_shown = {
+		exists = yes
+		is_landed = yes
+	}
+}
+
+woc_show_county_details = {
+	scope = character
+	is_shown = {
+		exists = yes
+		is_landed = yes
+	}
+}
+
+woc_show_realm_overview = {
+	scope = character
+	is_shown = {
+		exists = yes
+		is_landed = yes
+	}
+}
+
+woc_county_development_visible = {
+	scope = character
+	is_shown = {
+		exists = yes
+		is_landed = yes
+	}
+}
+
+woc_show_province_info = {
+	scope = character
+	is_shown = {
+		exists = yes
+		is_landed = yes
+	}
+}
+
+woc_realm_management_visible = {
+	scope = character
+	is_shown = {
+		exists = yes
+		is_landed = yes
+	}
+}

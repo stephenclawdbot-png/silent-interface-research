@@ -1,0 +1,79 @@
+# Murim Chronicles Lite - Core Effects
+
+murim_enter_jianghu_effect = {
+	set_variable = { name = murim_jianghu_member value = yes }
+	set_variable = { name = murim_jianghu_standing value = 0 }
+	set_variable = { name = murim_cultivation_progress value = 0 }
+	add_trait = murim_martial_artist
+	add_trait = murim_outer_qi
+	add_prestige = 50
+}
+
+murim_gain_jianghu_standing_effect = {
+	change_variable = { name = murim_jianghu_standing add = $AMOUNT$ }
+}
+
+murim_advance_cultivation_effect = {
+	if = {
+		limit = {
+			has_trait = murim_outer_qi
+			NOT = { has_trait = murim_inner_qi }
+			var:murim_cultivation_progress >= 100
+		}
+		remove_trait = murim_outer_qi
+		add_trait = murim_inner_qi
+		set_variable = { name = murim_cultivation_progress value = 0 }
+		add_prestige = 200
+		custom_tooltip = murim_breakthrough_to_inner_qi_tt
+	}
+	else_if = {
+		limit = {
+			has_trait = murim_inner_qi
+			NOT = { has_trait = murim_golden_core }
+			var:murim_cultivation_progress >= 200
+		}
+		remove_trait = murim_inner_qi
+		add_trait = murim_golden_core
+		set_variable = { name = murim_cultivation_progress value = 0 }
+		add_prestige = 500
+		custom_tooltip = murim_breakthrough_to_golden_core_tt
+	}
+	else_if = {
+		limit = {
+			has_trait = murim_golden_core
+			NOT = { has_trait = murim_nascent_soul }
+			var:murim_cultivation_progress >= 400
+		}
+		remove_trait = murim_golden_core
+		add_trait = murim_nascent_soul
+		set_variable = { name = murim_cultivation_progress value = 0 }
+		add_prestige = 1000
+		custom_tooltip = murim_breakthrough_to_nascent_soul_tt
+	}
+	else_if = {
+		limit = {
+			has_trait = murim_nascent_soul
+			NOT = { has_trait = murim_spirit_severing }
+			var:murim_cultivation_progress >= 800
+		}
+		remove_trait = murim_nascent_soul
+		add_trait = murim_spirit_severing
+		set_variable = { name = murim_cultivation_progress value = 0 }
+		add_prestige = 2000
+		custom_tooltip = murim_breakthrough_to_spirit_severing_tt
+	}
+	else = {
+		change_variable = { name = murim_cultivation_progress add = 25 }
+	}
+}
+
+murim_duel_victory_effect = {
+	add_character_modifier = { modifier = murim_duel_victory_high days = 365 }
+	add_prestige = 100
+	murim_gain_jianghu_standing_effect = { AMOUNT = 10 }
+}
+
+murim_duel_defeat_effect = {
+	add_character_modifier = { modifier = murim_recovering_from_duel days = 90 }
+	add_prestige = -50
+}

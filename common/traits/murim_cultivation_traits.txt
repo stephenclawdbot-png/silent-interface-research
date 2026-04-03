@@ -1,0 +1,148 @@
+# Murim Chronicles Lite - Cultivation Rank Traits
+# Clean chain: Outer Qi -> Inner Qi -> Golden Core -> Nascent Soul -> Spirit Severing
+
+murim_outer_qi = {
+	index = 500
+	category = fame
+	icon = murim_outer_qi
+
+	modifier = {
+		prowess = 2
+		health = 0.25
+		monthly_prestige = 0.1
+	}
+
+	ai_honor = 0
+	ai_rationality = 0
+	ai_sociability = 0
+	ai_zeal = 0
+}
+
+murim_inner_qi = {
+	index = 501
+	category = fame
+	icon = murim_golden_core
+
+	modifier = {
+		prowess = 5
+		health = 0.5
+		monthly_prestige = 0.2
+		diplomacy = 1
+	}
+
+	ai_honor = 0
+	ai_rationality = 0
+	ai_sociability = 0
+	ai_zeal = 0
+}
+
+murim_golden_core = {
+	index = 502
+	category = fame
+	icon = murim_golden_core
+
+	modifier = {
+		prowess = 10
+		health = 1.0
+		monthly_prestige = 0.5
+		diplomacy = 2
+		martial = 2
+	}
+
+	ai_honor = 0
+	ai_rationality = 0
+	ai_sociability = 0
+	ai_zeal = 0
+}
+
+murim_nascent_soul = {
+	index = 503
+	category = fame
+	icon = murim_nascent_soul
+
+	modifier = {
+		prowess = 16
+		health = 1.5
+		monthly_prestige = 1.0
+		diplomacy = 3
+		martial = 3
+		intrigue = 2
+	}
+
+	ai_honor = 0
+	ai_rationality = 0
+	ai_sociability = 0
+	ai_zeal = 0
+}
+
+murim_spirit_severing = {
+	index = 504
+	category = fame
+	icon = murim_spirit_severing
+
+	modifier = {
+		prowess = 24
+		health = 2.0
+		monthly_prestige = 2.0
+		diplomacy = 4
+		martial = 4
+		intrigue = 3
+		learning = 2
+	}
+
+	ai_honor = 0
+	ai_rationality = 0
+	ai_sociability = 0
+	ai_zeal = 0
+}
+
+# Basic martial artist marker
+murim_martial_artist = {
+	index = 505
+	category = fame
+	icon = murim_outer_qi
+
+	modifier = {
+		prowess = 1
+		monthly_prestige = 0.05
+	}
+}
+
+# Jianghu ranking markers
+murim_top_fifty_ranker = {
+	index = 510
+	category = fame
+	icon = murim_sword_dao
+
+	modifier = {
+		prowess = 3
+		monthly_prestige = 0.5
+		general_opinion = 5
+	}
+}
+
+murim_top_ten_ranker = {
+	index = 511
+	category = fame
+	icon = murim_heavenly_sword_intent
+
+	modifier = {
+		prowess = 6
+		monthly_prestige = 1.5
+		general_opinion = 15
+		dread_baseline_add = 10
+	}
+}
+
+murim_number_one_ranker = {
+	index = 512
+	category = fame
+	icon = murim_heavenly_sword_intent
+
+	modifier = {
+		prowess = 10
+		monthly_prestige = 3.0
+		general_opinion = 25
+		dread_baseline_add = 20
+	}
+}
