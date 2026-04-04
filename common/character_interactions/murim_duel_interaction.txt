@@ -22,6 +22,9 @@ murim_challenge_to_duel_interaction = {
 	}
 
 	on_accept = {
+		scope:recipient = {
+			save_scope_as = duel_opponent
+		}
 		scope:actor = {
 			trigger_event = { id = murim_lite.020 }
 		}

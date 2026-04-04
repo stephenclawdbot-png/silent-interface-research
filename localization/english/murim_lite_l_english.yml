@@ -71,6 +71,16 @@ l_english:
  murim_lite.005.desc: "The martial world acknowledges what few can deny — I stand among the ten strongest under heaven."
  murim_lite.005.a: "The summit beckons."
 
+ murim_lite.006.t: "Supreme Under Heaven"
+ murim_lite.006.desc: "There is no one left to surpass. The Jianghu recognizes it in silence. I am the number one martial artist under heaven."
+ murim_lite.006.a: "The summit. I am standing on it."
+
+ # Breakthrough tooltips
+ murim_breakthrough_to_inner_qi_tt: "Your qi condenses. You have broken through to the Inner Qi Realm."
+ murim_breakthrough_to_golden_core_tt: "A golden core forms in your dantian. You have reached the Golden Core Realm."
+ murim_breakthrough_to_nascent_soul_tt: "Your soul separates from the body and grows. You have attained the Nascent Soul Realm."
+ murim_breakthrough_to_spirit_severing_tt: "You sever your ties to the mortal world. You have reached the Spirit Severing Realm."
+
  # Sect traits
  murim_wudang_disciple: "Wudang Disciple"
  murim_wudang_disciple_desc: "A member of the orthodox Wudang Sect, known for their flowing sword techniques and Daoist philosophy."

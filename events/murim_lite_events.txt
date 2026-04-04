@@ -131,6 +131,28 @@ murim_lite.005 = {
 	}
 }
 
+murim_lite.006 = {
+	type = character_event
+	title = murim_lite.006.t
+	desc = murim_lite.006.desc
+	theme = martial
+
+	trigger = {
+		has_trait = murim_top_ten_ranker
+		var:murim_jianghu_standing >= 1000
+		NOT = { has_trait = murim_number_one_ranker }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = murim_lite.006.a
+		remove_trait = murim_top_ten_ranker
+		add_trait = murim_number_one_ranker
+		add_prestige = 3000
+	}
+}
+
 # ── MENTOR EVENTS ─────────────────────────────────────────────────────────────
 
 murim_lite.010 = {
@@ -174,7 +196,7 @@ murim_lite.020 = {
 
 	option = {
 		name = murim_lite.020.a  # Victory
-		trigger = { prowess >= scope:recipient.prowess }
+		trigger = { prowess >= scope:duel_opponent.prowess }
 		murim_duel_victory_effect = yes
 		add_character_modifier = { modifier = murim_challenge_cooldown days = 90 }
 		murim_gain_jianghu_standing_effect = { AMOUNT = 20 }
@@ -182,7 +204,7 @@ murim_lite.020 = {
 
 	option = {
 		name = murim_lite.020.b  # Defeat
-		trigger = { prowess < scope:recipient.prowess }
+		trigger = { prowess < scope:duel_opponent.prowess }
 		murim_duel_defeat_effect = yes
 		add_character_modifier = { modifier = murim_challenge_cooldown days = 90 }
 	}
@@ -229,8 +251,19 @@ murim_lite.030 = {
 	}
 
 	option = {
-		name = murim_lite.030.b  # Enter and lose
-		trigger = { prowess < 15 }
+		name = murim_lite.030.b  # Enter but don't win outright
+		trigger = {
+			NOT = {
+				AND = {
+					prowess >= 15
+					OR = {
+						has_trait = murim_golden_core
+						has_trait = murim_nascent_soul
+						has_trait = murim_spirit_severing
+					}
+				}
+			}
+		}
 		add_prestige = 50
 		murim_gain_jianghu_standing_effect = { AMOUNT = 10 }
 		custom_tooltip = murim_tournament_participated_tt

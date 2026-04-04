@@ -107,7 +107,7 @@ murim_enter_seclusion = {
 
 murim_open_ledger = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
-	ai_check_interval = 0
+	ai_check_interval = 10000  # Informational decision; AI never takes it
 
 	desc = murim_open_ledger_desc
 

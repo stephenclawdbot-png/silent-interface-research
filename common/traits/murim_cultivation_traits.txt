@@ -21,7 +21,7 @@ murim_outer_qi = {
 murim_inner_qi = {
 	index = 501
 	category = fame
-	icon = murim_golden_core
+	icon = murim_qi_condensation
 
 	modifier = {
 		prowess = 5
